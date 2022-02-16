@@ -1,12 +1,14 @@
 import Mapboxgl from 'mapbox-gl';
 import { defineComponent, onMounted, ref, watch } from 'vue';
-import { usePlacesStore } from '../../composables/usePlacesStore';
+import { usePlacesStore, useMapStore } from '@/composables';
 
 export default defineComponent({
   name: 'MapView',
   setup() {
     const mapElement = ref<HTMLDivElement>();
     const { userLocation, isUserLocationReady } = usePlacesStore();
+
+    const { setMap } = useMapStore()
 
     const initMap = async () => {
       if (!mapElement.value) throw new Error('Elemento div no existe');
@@ -35,6 +37,7 @@ export default defineComponent({
         .addTo(map)
 
         // TODO: establecer el mapa en vuex
+        // setMap(map);
     };
 
     // onMounted(() => {
