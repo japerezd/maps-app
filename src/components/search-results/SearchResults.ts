@@ -1,15 +1,12 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-
-  name: 'SearchBar',
+  name: 'SearchResults',
 
   setup() {
 
     return {
 
     }
-
   }
-
-})
+});
