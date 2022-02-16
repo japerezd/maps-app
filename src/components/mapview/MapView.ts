@@ -37,7 +37,7 @@ export default defineComponent({
         .addTo(map)
 
         // TODO: establecer el mapa en vuex
-        // setMap(map);
+        setMap(map);
     };
 
     // onMounted(() => {
