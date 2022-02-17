@@ -1,4 +1,4 @@
-<script lang="ts" src="./SearchBar.ts" />
+<script lang="ts" src="./SearchBar.ts"/>
 
 <template>
   <div class="searchbar-container">
